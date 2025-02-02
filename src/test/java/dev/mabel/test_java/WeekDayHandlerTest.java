@@ -34,4 +34,14 @@ public class WeekDayHandlerTest {
         assertTrue(weekdays.contains("Sunday"));
     }
 
+    @Test
+    void testGetWeekdays() {
+    weekDayHandler.createWeekdayList();
+    List<String> weekdays = weekDayHandler.getWeekdays();
+    assertNotNull(weekdays);
+    assertEquals(7, weekdays.size());
+    assertTrue(weekdays instanceof ArrayList);
+
+    }
+
 }
