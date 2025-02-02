@@ -41,7 +41,12 @@ public class WeekDayHandlerTest {
     assertNotNull(weekdays);
     assertEquals(7, weekdays.size());
     assertTrue(weekdays instanceof ArrayList);
+    }
 
+    @Test
+    void testGetListLength() {
+    weekDayHandler.createWeekdayList();
+    assertEquals(7, weekDayHandler.getListLength());
     }
 
 }
