@@ -36,7 +36,7 @@ public class WeekDayHandlerTest {
 
     @Test
     void testGetWeekdays() {
-    weekDayHandler.createWeekdayList();
+    weekDayHandler.createWeekdaysList();
     List<String> weekdays = weekDayHandler.getWeekdays();
     assertNotNull(weekdays);
     assertEquals(7, weekdays.size());
