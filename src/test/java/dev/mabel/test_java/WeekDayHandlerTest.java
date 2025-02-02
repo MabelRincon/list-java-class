@@ -45,7 +45,7 @@ public class WeekDayHandlerTest {
 
     @Test
     void testGetListLength() {
-    weekDayHandler.createWeekdayList();
+    weekDayHandler.createWeekdaysList();
     assertEquals(7, weekDayHandler.getListLength());
     }
 
