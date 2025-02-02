@@ -19,4 +19,9 @@ public class WeekDayHandler {
     public List<String> getWeekdays() {
         return new ArrayList<>(weekdays);
     }
+
+    public int getListLength() {
+        return weekdays.size();
+    }
+
 }
