@@ -1,45 +1,61 @@
-# java_template
-Plantilla config Java
-Cómo usar tu repositorio como plantilla
-Accede al repositorio en GitHub:
+# Weekday Manager Class in Java
 
-Ve a la página del repositorio que configuraste como plantilla (por ejemplo, https://github.com/YefGav/java_template).
-Haz clic en el botón "Use this template":
+This project implements a Java class to manage a list of weekdays, adhering to best practices like Test-Driven Development (TDD) and utilizing the `java.util.List` collection.
 
-Este botón aparece en la parte superior derecha de la página principal del repositorio.
-Al hacer clic en él, serás redirigido a una página para crear un nuevo repositorio basado en la plantilla.
-Configura el nuevo repositorio:
+## Table of Contents
 
-Asigna un nombre al nuevo proyecto.
-Opcional: Agrega una descripción.
-Selecciona si deseas que el nuevo repositorio sea público o privado.
-Haz clic en "Create repository from template".
-Clona el nuevo repositorio en tu máquina local:
+- Overview
+- Features
+- Getting Started
+  - Prerequisites
+  - Installation
+- Feedback and Contributions
 
-Copia la URL del nuevo repositorio.
-En tu terminal, clona el nuevo repositorio con:
-bash
-Copiar
-Editar
-git clone <URL-del-nuevo-repositorio>
-Cambia al directorio del proyecto:
-bash
-Copiar
-Editar
-cd <nombre-del-nuevo-repositorio>
-Personaliza el nuevo proyecto
-Actualiza el nombre del proyecto:
+## Overview
 
-Cambia los nombres y referencias en archivos como README.md, build.gradle, pom.xml, o cualquier archivo que haga referencia al nombre de la plantilla.
-Inicia el desarrollo del proyecto:
+The `WeekdayManager` class provides a set of methods to effectively handle a list of weekdays. It allows you to create, retrieve, modify, and query the list while ensuring data integrity and code quality through comprehensive unit tests.
 
-Empieza a trabajar en el código, agrega nuevas funcionalidades, y gestiona el proyecto como cualquier otro repositorio Git.
-Realiza tus commits y sube los cambios:
+## Features
 
-Usa los comandos de Git habituales para trabajar con el repositorio:
-bash
-Copiar
-Editar
-git add .
-git commit -m "Primeros cambios en el proyecto"
-git push
+- **Create Weekday List**: Initializes the list with the standard days of the week.
+- **Get Weekdays**: Retrieves the current list of weekdays.
+- **Get List Length**: Returns the number of days in the list.
+- **Remove Weekday**: Removes a specific day from the list.
+- **Get Weekday by Index**: Retrieves a day from the list using its index.
+- **Check Weekday Existence**: Verifies if a given day exists in the list.
+- **Sort Weekdays**: Sorts the list alphabetically.
+- **Clear Weekday List**: Empties the list.
+
+## Getting Started
+
+### Prerequisites
+
+- Java Development Kit (JDK) 21
+- Maven (for build management)
+- JUnit (for testing)
+- Git (for version control)
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/MabelRincon/list-java-class.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd list-java-class.git
+   ```
+3. Build the project:
+   ```bash
+   mvn compile
+   ```
+
+## Feedback and Contributions:
+
+Feedback is welcome! Feel free to open issues or submit pull requests to suggest improvements or report any bugs.
+
+## Author
+
+**Mabel Rincon**
+
+Thanks to [Yeferson Gaviria](https://github.com/YefGav) for his useful Java Template.
