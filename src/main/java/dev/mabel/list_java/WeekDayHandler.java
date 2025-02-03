@@ -3,6 +3,7 @@ package dev.mabel.list_java;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Collections;
 
 public class WeekDayHandler {
 
@@ -38,5 +39,10 @@ public class WeekDayHandler {
     public boolean weekDayExists(String day) {
         return weekdays.contains(day);
     }
+
+    public void sortWeekdaysAlphabetically() {
+        Collections.sort(weekdays);
+    }
+
 
 }
