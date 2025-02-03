@@ -35,4 +35,8 @@ public class WeekDayHandler {
         return null;
     }
 
+    public boolean weekDayExists(String day) {
+        return weekdays.contains(day);
+    }
+
 }
