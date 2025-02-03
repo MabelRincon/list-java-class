@@ -99,4 +99,12 @@ public class WeekDayHandlerTest {
         assertEquals(expected, weekdays);
     }
 
+    @Test
+        void testEmptyWeekdaysList() {
+        weekDayHandler.createWeekdaysList();
+        weekDayHandler.emptyWeekdaysList();
+        assertEquals(0, weekDayHandler.getListLength());
+        assertTrue(weekDayHandler.getWeekdays().isEmpty());
+    }
+
 }
