@@ -51,15 +51,15 @@ public class WeekDayHandlerTest {
 
     @Test
     void testRemoveWeekday_existingDay() {
-    weekDayHandler.createWeekdayList();
+    weekDayHandler.createWeekdaysList();
     weekDayHandler.removeWeekday("Thursday");
-    assertEquals(6, weekDayHandler.getListLength();)
+    assertEquals(6, weekDayHandler.getListLength());
     assertFalse(weekDayHandler.getWeekdays().contains("Thursday"));
 }
 
     @Test
     void testRemoveWeekday_nonExistingDay() {
-    weekDayHandler.createWeekdayList();
+    weekDayHandler.createWeekdaysList();
     weekDayHandler.removeWeekday("Frieday");
     assertEquals(7, weekDayHandler.getListLength());
 }
