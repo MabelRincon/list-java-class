@@ -107,4 +107,12 @@ public class WeekDayHandlerTest {
         assertTrue(weekDayHandler.getWeekdays().isEmpty());
     }
 
+    @Test
+    void testGetWeekdays_returnsCopy() {
+        weekDayHandler.createWeekdaysList();
+        List<String> weekdays = weekDayHandler.getWeekdays();
+        weekdays.clear();
+        assertEquals(7, weekDayHandler.getListLength());
+    }
+
 }
