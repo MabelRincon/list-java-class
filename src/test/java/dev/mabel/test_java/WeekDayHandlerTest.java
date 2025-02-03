@@ -67,7 +67,7 @@ public class WeekDayHandlerTest {
     @Test
     void testGetRequestedWeekday_existingDay() {
     weekDayHandler.createWeekdaysList();
-    String day = weekDayHandler.getRequestedWeekday(Saturday);
+    String day = weekDayHandler.getRequestedWeekday("Saturday");
     assertEquals("Saturday", day);
     }
 

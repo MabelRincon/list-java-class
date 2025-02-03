@@ -28,4 +28,11 @@ public class WeekDayHandler {
         weekdays.remove(day);
     }
 
+    public String getRequestedWeekday(String day) {
+        if (weekdays.contains(day)) {
+            return day;
+        }
+        return null;
+    }
+
 }
