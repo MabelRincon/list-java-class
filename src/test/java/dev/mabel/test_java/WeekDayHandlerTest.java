@@ -90,4 +90,14 @@ public class WeekDayHandlerTest {
     assertFalse(weekDayHandler.weekDayExists("Someday"));
     }
 
+    @Test
+    void testSortWeekdaysAlphabetically() {
+    weekDayHandler.createWeekdaysList();
+    weekDayHandler.sortWeekdaysAlphabetically();
+    List<String> weekdays = weekDayHandler.getWeekdays();
+    assertEquals(weekdays, Arrays.asList("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"));
+    assertEquals(expected,weekdays);
+    }
+
+
 }
