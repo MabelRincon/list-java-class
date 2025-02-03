@@ -44,5 +44,8 @@ public class WeekDayHandler {
         Collections.sort(weekdays);
     }
 
+    public void emptyWeekdays() {
+        weekdays.clear();
+    }
 
 }
