@@ -102,7 +102,7 @@ public class WeekDayHandlerTest {
     @Test
         void testEmptyWeekdays() {
         weekDayHandler.createWeekdaysList();
-        weekDayHandler.emptyWeekdaysList();
+        weekDayHandler.emptyWeekdays();
         assertEquals(0, weekDayHandler.getListLength());
         assertTrue(weekDayHandler.getWeekdays().isEmpty());
     }
