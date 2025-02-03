@@ -35,69 +35,68 @@ public class WeekDayHandlerTest {
     }
 
     @Test
-    void testGetWeekdays() {
-    weekDayHandler.createWeekdaysList();
-    List<String> weekdays = weekDayHandler.getWeekdays();
-    assertNotNull(weekdays);
-    assertEquals(7, weekdays.size());
-    assertTrue(weekdays instanceof ArrayList);
+        void testGetWeekdays() {
+        weekDayHandler.createWeekdaysList();
+        List<String> weekdays = weekDayHandler.getWeekdays();
+        assertNotNull(weekdays);
+        assertEquals(7, weekdays.size());
+        assertTrue(weekdays instanceof ArrayList);
     }
 
     @Test
-    void testGetListLength() {
-    weekDayHandler.createWeekdaysList();
-    assertEquals(7, weekDayHandler.getListLength());
+        void testGetListLength() {
+        weekDayHandler.createWeekdaysList();
+        assertEquals(7, weekDayHandler.getListLength());
     }
 
     @Test
-    void testRemoveWeekday_existingDay() {
-    weekDayHandler.createWeekdaysList();
-    weekDayHandler.removeWeekday("Thursday");
-    assertEquals(6, weekDayHandler.getListLength());
-    assertFalse(weekDayHandler.getWeekdays().contains("Thursday"));
+        void testRemoveWeekday_existingDay() {
+        weekDayHandler.createWeekdaysList();
+        weekDayHandler.removeWeekday("Thursday");
+        assertEquals(6, weekDayHandler.getListLength());
+        assertFalse(weekDayHandler.getWeekdays().contains("Thursday"));
     }
 
     @Test
-    void testRemoveWeekday_nonExistingDay() {
-    weekDayHandler.createWeekdaysList();
-    weekDayHandler.removeWeekday("Frieday");
-    assertEquals(7, weekDayHandler.getListLength());
+        void testRemoveWeekday_nonExistingDay() {
+        weekDayHandler.createWeekdaysList();
+        weekDayHandler.removeWeekday("Frieday");
+        assertEquals(7, weekDayHandler.getListLength());
     }
 
     @Test
-    void testGetRequestedWeekday_existingDay() {
-    weekDayHandler.createWeekdaysList();
-    String day = weekDayHandler.getRequestedWeekday("Saturday");
-    assertEquals("Saturday", day);
+        void testGetRequestedWeekday_existingDay() {
+        weekDayHandler.createWeekdaysList();
+        String day = weekDayHandler.getRequestedWeekday("Saturday");
+        assertEquals("Saturday", day);
     }
 
     @Test
-    void testGetRequestedWeekday_nonExistingDay() {
-    weekDayHandler.createWeekdaysList();
-    String day = weekDayHandler.getRequestedWeekday("Humpday");
-    assertNull(day);
+        void testGetRequestedWeekday_nonExistingDay() {
+        weekDayHandler.createWeekdaysList();
+        String day = weekDayHandler.getRequestedWeekday("Humpday");
+        assertNull(day);
     }
 
     @Test
-    void testWeekDayExists() {
-    weekDayHandler.createWeekdaysList();
-    assertTrue(weekDayHandler.weekDayExists("Sunday"));
+        void testWeekDayExists() {
+        weekDayHandler.createWeekdaysList();
+        assertTrue(weekDayHandler.weekDayExists("Sunday"));
     }
 
     @Test
-    void testWeekDayExists_nonExistingDay() {
-    weekDayHandler.createWeekdaysList();
-    assertFalse(weekDayHandler.weekDayExists("Someday"));
+        void testWeekDayExists_nonExistingDay() {
+        weekDayHandler.createWeekdaysList();
+        assertFalse(weekDayHandler.weekDayExists("Someday"));
     }
 
     @Test
-    void testSortWeekdaysAlphabetically() {
-    weekDayHandler.createWeekdaysList();
-    weekDayHandler.sortWeekdaysAlphabetically();
-    List<String> weekdays = weekDayHandler.getWeekdays();
-    assertEquals(weekdays, Arrays.asList("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"));
-    assertEquals(expected,weekdays);
+        void testSortWeekdaysAlphabetically() {
+        weekDayHandler.createWeekdaysList();
+        weekDayHandler.sortWeekdaysAlphabetically();
+        List<String> weekdays = weekDayHandler.getWeekdays();
+        List<String> expected = Arrays.asList("Friday", "Monday", "Saturday", "Sunday", "Thursday", "Tuesday", "Wednesday");
+        assertEquals(expected, weekdays);
     }
-
 
 }
