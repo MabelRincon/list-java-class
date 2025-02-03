@@ -78,5 +78,16 @@ public class WeekDayHandlerTest {
     assertNull(day);
     }
 
+    @Test
+    void testWeekDayExists() {
+    weekDayHandler.createWeekdaysList();
+    assertTrue(weekDayHandler.weekDayExists("Sunday"));
+    }
+
+    @Test
+    void testWeekDayExists_nonExistingDay() {
+    weekDayHandler.createWeekdaysList();
+    assertFalse(weekDayHandler.weekDayExists("Someday"));
+    }
 
 }
